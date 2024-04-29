@@ -1,0 +1,1 @@
+print('Dobrze by było powtórzyć kiedyś od początku GITa - poje*ane "gunwo"')
