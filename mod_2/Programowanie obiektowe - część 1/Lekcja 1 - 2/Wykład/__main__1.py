@@ -28,7 +28,7 @@ class Grade:
 class School:
     pass
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     student_mikolaj = Student()                     #TWORZENIE INSTANCJI OBIEKTU / KLASY
 
     grade_a = Grade()
