@@ -47,4 +47,7 @@ if __name__ == '__main__':
     print()
     print('Typ zamówienia nr 1: ', type(order_list[0]))
     print()
-    print('Jajko - jaki rodzaj: ', type(products['Egg']))
+    for item, product in products.items():
+        print('Produkt: ',item,'\t','Typ produktu: ',type(product))
+        print()
+    print(products)
