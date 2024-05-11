@@ -7,5 +7,5 @@ class Student:
     def promote(self):
         self.promoted = True
 
-    def print_self(self):
+    def print_self_student(self):
         print(f'Student: {self.first_name} {self.last_name}, Promoted: {self.promoted}')

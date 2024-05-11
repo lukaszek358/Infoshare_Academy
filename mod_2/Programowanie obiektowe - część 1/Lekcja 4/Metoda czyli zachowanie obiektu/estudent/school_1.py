@@ -1,6 +1,5 @@
 import random
-from estudent.student import Student
-
+from estudent.student_1 import Student_1
 class School:
     def __init__(self, name, students):
         self.name = name
@@ -23,7 +22,7 @@ def create_school_with_students(school_name):
     for student_number in range(number_of_students):
         first_name = f'Student-{student_number + 1}'
         last_name = 'Smith'
-        students.append(Student(first_name, last_name))
+        students.append(Student_1(first_name, last_name))
 
     school = School(school_name, students)
     return school
