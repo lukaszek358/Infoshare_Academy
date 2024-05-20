@@ -30,7 +30,6 @@ class Order:
         for product in product_list:
             total_price = total_price + product.unit_price
         self.total_price = total_price
-
 def print_product(product):
     print(f'Nazwa: {product.name}   |   Kategoria: {product.category_name}  |   Cena: {product.unit_price} PLN/szt.')
 

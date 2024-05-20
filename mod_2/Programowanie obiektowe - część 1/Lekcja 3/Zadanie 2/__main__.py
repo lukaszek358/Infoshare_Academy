@@ -13,7 +13,6 @@ class Apple:
         self.apple_name = apple_name
         self.apple_size = apple_size
         self.apple_price = apple_price
-
 class Potato:
     def __init__(self, potato_name, potato_size, potato_price):
         self.potato_name = potato_name
@@ -27,6 +26,7 @@ class Order:
         if product_list is None:
             product_list = []
         self.product_list = product_list
+
         total_price = 0
         for product in product_list:
             total_price = total_price + product.unit_price
