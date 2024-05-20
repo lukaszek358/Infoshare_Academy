@@ -26,10 +26,8 @@ def run_example():
 
     # Wywołanie metody
     student.print_something()
-
     # Pierwszy przekazany niejawnie argument - zawiera referencje na aktualny obiekt
     student.print_self()
-
     # Metoda może wywoływać inną metodę
     student.do_all_work()
 

@@ -20,7 +20,7 @@ def create_school_with_students(school_name):
     number_of_students = random.randint(1, 20)
     students = []
     for student_number in range(number_of_students):
-        first_name = f'Student-{student_number + 1}'
+        first_name = f'Student_{student_number + 1}'
         last_name = 'Smith'
         students.append(Student_1(first_name, last_name))
 
