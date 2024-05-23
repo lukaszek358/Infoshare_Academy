@@ -1,23 +1,18 @@
-# ZADANIE NR 3
-# Napisz funkcję generującą zamówienie z losową listą produktów na przykład: Produkt-1, Produkt-2 itd.
+# Zadanie nr 1
+# Zmodyfikuj rozwiązanie ostatniego zadania (poprzednia lekcja).
+# Zamień funkcje wypisywania produktu i zamówienia na metody.
+
 import random
+
 class Product:
     def __init__(self, name, category_name, unit_price):
         self.name = name
         self.category_name = category_name
         self.unit_price = unit_price
 
-class Apple:
-    def __init__(self, apple_name, apple_size, apple_price):
-        self.apple_name = apple_name
-        self.apple_size = apple_size
-        self.apple_price = apple_price
+    def print_self_product(self):
+        print(f'Nazwa: {self.name}   |   Kategoria: {self.category_name}  |   Cena: {self.unit_price} PLN/szt.')
 
-class Potato:
-    def __init__(self, potato_name, potato_size, potato_price):
-        self.potato_name = potato_name
-        self.potato_size = potato_size
-        self.potato_price = potato_price
 
 class Order:
     def __init__(self, client_first_name, client_last_name, product_list = None):
@@ -30,19 +25,17 @@ class Order:
         for product in product_list:
             total_price = total_price + product.unit_price
         self.total_price = total_price
-def print_product(product):
-    print(f'Nazwa: {product.name}   |   Kategoria: {product.category_name}  |   Cena: {product.unit_price} PLN/szt.')
 
-def print_order(order):
-    print('--' * 30)                                                                                                    # ROZDZIELNIK ZAMÓWIEŃ ZBUDOWANY ZE ZNAKÓW
-    print(f'Zamówienie złożone przez: {order.client_first_name} {order.client_last_name}')
-    print(f'Wartość zamówienia: {order.total_price} PLN')
-    print('Produkty zamówione:')
-    for product in order.product_list:
-        print('\t', end= '')
-        print_product(product)
-    print('--' * 30)
-    print()
+    def print_self(self):
+        print('--' * 30)
+        print(f'Zamówienie złożone przez: {self.client_first_name} {self.client_last_name}')
+        print(f'Wartość zamówienia: {self.total_price} PLN')
+        print('Produkty zamówione:')
+        for product in self.product_list:
+            print('\t', end= '')
+            product.print_self_product()
+        print('--' * 30)
+        print()
 
 def generate_order():
     number_of_products = random.randint(1, 15)
@@ -59,9 +52,9 @@ def generate_order():
 
 def run():
     first_order = generate_order()
-    print_order(first_order)
+    first_order.print_self()
     second_order = generate_order()
-    print_order(second_order)
+    second_order.print_self()
 
 if __name__ == '__main__':
     run()
