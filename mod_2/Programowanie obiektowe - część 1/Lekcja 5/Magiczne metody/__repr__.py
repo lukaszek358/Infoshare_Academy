@@ -10,7 +10,7 @@ class Student:
         self.promoted = False
 
     def __repr__(self):                                                                                                 # METODA __repr__
-        return f'<Student first_name = {self.first_name}, last_name = {self.last_name}, promoted = {self.promoted}> '
+        return f'<Student first_name = {self.first_name}, last_name = {self.last_name}, promoted = {self.promoted}> '   # KONWENCJA ZWRACANIA INFORMACJI Z WYKORZYSTANIEM METODY __repr__
     def __str__(self):                                                                                                  # METODA __str__
         return f'Student: {self.first_name} {self.last_name}, Promoted: {self.promoted}'
 
